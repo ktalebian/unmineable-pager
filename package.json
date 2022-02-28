@@ -1,0 +1,36 @@
+{
+  "name": "unmineable-pager",
+  "version": "1.0.0",
+  "description": "SMS pager system for monitoring your unmineable miner",
+  "keywords": [],
+  "homepage": "https://github.com/ktalebian/unmineable-pager#readme",
+  "bugs": {
+    "url": "https://github.com/ktalebian/unmineable-pager/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ktalebian/unmineable-pager.git"
+  },
+  "license": "ISC",
+  "author": "",
+  "main": "index.js",
+  "scripts": {
+    "prebuild": "rm -rf dist",
+    "build": "tsc --noEmit && node build.js",
+    "lint": "eslint --ext ts --ext js src/ *.js",
+    "lint:fix": "npm run lint -- --fix"
+  },
+  "devDependencies": {
+    "@types/node": "^17.0.21",
+    "@types/qs": "^6.9.7",
+    "esbuild": "^0.14.23",
+    "eslint": "^8.10.0",
+    "eslint-config-twilio-ts": "^2.0.0",
+    "typescript": "^4.5.5"
+  },
+  "dependencies": {
+    "axios": "^0.26.0",
+    "dotenv": "^16.0.0",
+    "qs": "^6.10.3"
+  }
+}
