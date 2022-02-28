@@ -8,6 +8,7 @@ const config = {
   format: 'esm',
   outfile: 'dist/index.esm.js',
   platform: 'node',
+  target: 'es6',
   minify: true,
 };
 
