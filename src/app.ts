@@ -12,7 +12,7 @@ class App {
   }
 
   public start() {
-    setInterval(this.run, this.#intervalMs);
+    setInterval(this.run, 5000);
   }
 
   private run = async (): Promise<void> => {

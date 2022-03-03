@@ -26,8 +26,12 @@ class Unmineable {
       url: `https://api.unminable.com/v4/account/${workerId}/workers`,
       timeout: 1000 * 10,
     });
+    const worker = resp?.data?.data?.ethash?.workers?.[0];
+    if (!worker) {
+      return false;
+    }
 
-    return resp?.data?.data?.ethash?.workers?.length === 1;
+    return worker.online;
   };
 
   public info = async (): Promise<UnmineableInfo> => {
